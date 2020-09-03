@@ -1,0 +1,17 @@
+How to install:
+1. cd front-proy\
+2. docker-compose build
+3. docker-compose start
+
+Running on localhost:8080
+
+4. docker-compose stop
+
+How to install:
+1. cd back-proy\
+2. docker-compose build
+3. docker-compose start
+
+Running on localhost:3000
+
+4. docker-compose stop
