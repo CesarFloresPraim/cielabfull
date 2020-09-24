@@ -5,10 +5,12 @@ services:
  webapp: # name of the first service
   build: front-proy # specify the directory of the Dockerfile
   volumes:
-    - '.:/app'
-    - '/app/node_modules'
+    - './front-proy:/usr/src/app'
+    - '/usr/src/app/node_modules'
   ports:
     - "8080:8080" # specify port mapping
+  environment:
+    - CHOKIDAR_USEPOLLING=true
  
  express: # name of the second service
   build: back-proy # specify the directory of the Dockerfile

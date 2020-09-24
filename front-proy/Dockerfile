@@ -8,7 +8,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Copy dependency definitions
-COPY package.json /usr/src/app
+COPY package.json /usr/src/app/package.json
 
 # Install dependecies
 RUN npm install
@@ -17,5 +17,6 @@ RUN npm install
 COPY . /usr/src/app
 RUN npm install @vue/cli@3.7.0 -g
 
+EXPOSE 8080
 # start app
 CMD ["npm", "run", "serve"]
