@@ -17,7 +17,6 @@ RUN npm install
 COPY . /usr/src/app
 RUN npm install @vue/cli@3.7.0 -g
 
-ENV PORT=80
 EXPOSE 80
 # start app
 CMD ["npm", "run", "serve"]
